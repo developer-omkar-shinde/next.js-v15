@@ -2,7 +2,6 @@
 import PageContainer from "@/layouts/PageContainer";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styles from "./header.module.scss";
 const Nav = () => {
   const pathname = usePathname();
 
@@ -19,7 +18,7 @@ const Nav = () => {
     pathname === href || pathname.startsWith(href + "/");
 
   return (
-    <header className={`bg-gray-200 ${styles.header}`}>
+    <header className={`bg-gray-200  `}>
       <PageContainer>
         <ul className="flex gap-4 p-8 ">
           {navItems.map((item) => (
