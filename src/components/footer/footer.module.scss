@@ -1,0 +1,15 @@
+.footer {
+  height: var(--footer-height);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.496);
+  // background-color: white;
+  margin-top: var(--footer-height);
+
+  p {
+    text-align: center;
+  }
+}
