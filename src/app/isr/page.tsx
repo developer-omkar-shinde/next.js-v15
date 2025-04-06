@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import UsersList from "@/components/usersList/UsersList";
 import PageContainer from "@/layouts/PageContainer";
 import PageLayout from "@/layouts/PageLayout";
 import { Metadata } from "next";
@@ -25,19 +26,7 @@ const page = async () => {
           ISR is a hybrid of SSG + SSR. It allows pages to be statically
           generated but revalidated in the background after a specific time.
         </p>
-        <div className="p-6">
-          <h1 className="text-2xl font-bold mb-4">User List</h1>
-          <ul className="space-y-2">
-            {data.users.map((user: any) => (
-              <li key={user.id} className="border p-2 rounded shadow">
-                <strong>
-                  {user.firstName} {user.lastName}
-                </strong>{" "}
-                - {user.email}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <UsersList data={data} />
       </PageContainer>
     </PageLayout>
   );

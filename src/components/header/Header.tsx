@@ -12,7 +12,7 @@ const Nav = () => {
     { label: "SSR", href: "/ssr" },
     { label: "SSG", href: "/ssg" },
     { label: "ISR", href: "/isr" },
-    { label: "Blog", href: "/blog" }, // supports /blog, /blog/[slug], etc.
+    { label: "Streaming ", href: "/streaming " }, // supports /blog, /blog/[slug], etc.
   ];
 
   const isActive = (href: string) =>
