@@ -32,8 +32,6 @@ File-based routing for API
 
 Deployment readiness
 
-Here are 3 solid project ideas that
-
 RSC + Streaming Support
 
 RSC Interop with Libraries

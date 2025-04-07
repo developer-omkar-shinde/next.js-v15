@@ -1,27 +1,23 @@
 "use client";
+
 import PageContainer from "@/layouts/PageContainer";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-const Nav = () => {
-  const pathname = usePathname();
+import React from "react";
 
-  const navItems = [
-    { label: "Home", href: "/" },
-    { label: "CSR", href: "/csr" },
-    { label: "SSR", href: "/ssr" },
-    { label: "SSG", href: "/ssg" },
-    { label: "ISR", href: "/isr" },
-    { label: "Streaming ", href: "/streaming " },
-    { label: "Nested Routes ", href: "/nested-routes " },
-    { label: "Parallel Routes ", href: "/parallel-routes " },
-    { label: "Intercepting Routes", href: "/intercepting-routes/users" },
-  ];
+const navItems = [
+  { label: "Route1", href: "nested-routes/route1" },
+  { label: "Route2", href: "nested-routes/route2" },
+];
+
+const NestedRoutes = () => {
+  const pathname = usePathname();
 
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(href + "/");
 
   return (
-    <header className={`bg-gray-200  `}>
+    <div>
       <PageContainer>
         <ul className="flex gap-4 p-8 ">
           {navItems.map((item) => (
@@ -40,8 +36,8 @@ const Nav = () => {
           ))}
         </ul>
       </PageContainer>
-    </header>
+    </div>
   );
 };
 
-export default Nav;
+export default NestedRoutes;

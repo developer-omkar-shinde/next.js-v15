@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import UsersList from "@/components/usersList/UsersList";
 import PageContainer from "@/layouts/PageContainer";
-import PageLayout from "@/layouts/PageLayout";
 import { Metadata } from "next";
 import React from "react";
 
@@ -19,16 +18,14 @@ const page = async () => {
   const data = await res.json();
 
   return (
-    <PageLayout>
-      <PageContainer paddingTopBottom={1}>
-        <h2>ISR – Incremental Static Regeneration</h2>
-        <p>
-          ISR is a hybrid of SSG + SSR. It allows pages to be statically
-          generated but revalidated in the background after a specific time.
-        </p>
-        <UsersList data={data} />
-      </PageContainer>
-    </PageLayout>
+    <PageContainer paddingTopBottom={1}>
+      <h2>ISR – Incremental Static Regeneration</h2>
+      <p>
+        ISR is a hybrid of SSG + SSR. It allows pages to be statically generated
+        but revalidated in the background after a specific time.
+      </p>
+      <UsersList data={data} />
+    </PageContainer>
   );
 };
 

@@ -2,7 +2,6 @@
 "use client";
 import UsersList from "@/components/usersList/UsersList";
 import PageContainer from "@/layouts/PageContainer";
-import PageLayout from "@/layouts/PageLayout";
 import React, { useEffect, useState } from "react";
 
 const Page = () => {
@@ -21,17 +20,15 @@ const Page = () => {
   });
 
   return (
-    <PageLayout>
-      <PageContainer paddingTopBottom={1}>
-        <h2>CSR - Client-Side Renderin</h2>
-        <p>
-          Client-Side Rendering means the page is rendered entirely in the
-          browser using JavaScript. The server sends a minimal HTML shell, and
-          then JavaScript takes over to render content dynamically.
-        </p>
-        <UsersList data={data} />
-      </PageContainer>
-    </PageLayout>
+    <PageContainer paddingTopBottom={1}>
+      <h2>CSR - Client-Side Renderin</h2>
+      <p>
+        Client-Side Rendering means the page is rendered entirely in the browser
+        using JavaScript. The server sends a minimal HTML shell, and then
+        JavaScript takes over to render content dynamically.
+      </p>
+      <UsersList data={data} />
+    </PageContainer>
   );
 };
 
